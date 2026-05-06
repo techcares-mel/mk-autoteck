@@ -47,13 +47,15 @@ ul { list-style: none; }
 /* ===== DEMO WATERMARK ===== */
 .demo-watermark {
   position: fixed;
-  right: -80px;
+  right: -60px;
   top: 50%;
   transform: translateY(-50%) rotate(90deg);
-  font-size: 96px;
+  font-size: 110px;
   font-weight: 900;
-  letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.06);
+  letter-spacing: 0.25em;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(33, 150, 243, 0.6);
+  text-shadow: 0 0 40px rgba(33, 150, 243, 0.25);
   pointer-events: none;
   z-index: 9998;
   user-select: none;
