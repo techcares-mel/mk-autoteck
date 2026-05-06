@@ -6,14 +6,14 @@
 }
 
 :root {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #111111;
-  --bg-card: #1a1a1a;
+  --bg-primary: #181818;
+  --bg-secondary: #212121;
+  --bg-card: #2a2a2a;
   --text-primary: #ffffff;
-  --text-secondary: #a0a0a0;
+  --text-secondary: #b8b8b8;
   --accent: #2196F3;
   --accent-hover: #1565C0;
-  --border: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.12);
   --border-hover: rgba(33, 150, 243, 0.5);
   --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --nav-height: 72px;
@@ -42,6 +42,22 @@ ul { list-style: none; }
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 clamp(24px, 5vw, 80px);
+}
+
+/* ===== DEMO WATERMARK ===== */
+.demo-watermark {
+  position: fixed;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-size: 96px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+  z-index: 9998;
+  user-select: none;
+  white-space: nowrap;
 }
 
 /* ===== SCROLL PROGRESS ===== */
@@ -892,7 +908,7 @@ a.contact-value:hover {
 
 /* ===== FOOTER ===== */
 .footer {
-  background: #050505;
+  background: #111111;
   padding: 80px 0 0;
   border-top: 1px solid var(--border);
 }
