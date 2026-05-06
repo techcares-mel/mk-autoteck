@@ -6,15 +6,15 @@
 }
 
 :root {
-  --bg-primary: #181818;
-  --bg-secondary: #212121;
-  --bg-card: #2a2a2a;
-  --text-primary: #ffffff;
-  --text-secondary: #b8b8b8;
-  --accent: #2196F3;
-  --accent-hover: #1565C0;
-  --border: rgba(255, 255, 255, 0.12);
-  --border-hover: rgba(33, 150, 243, 0.5);
+  --bg-primary: #F2EDE2;
+  --bg-secondary: #EAE3D4;
+  --bg-card: #E4DBCC;
+  --text-primary: #1C1812;
+  --text-secondary: #7A7060;
+  --accent: #3A6B28;
+  --accent-hover: #285019;
+  --border: rgba(28, 24, 18, 0.1);
+  --border-hover: rgba(58, 107, 40, 0.4);
   --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --nav-height: 72px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -54,8 +54,8 @@ ul { list-style: none; }
   font-weight: 900;
   letter-spacing: 0.25em;
   color: transparent;
-  -webkit-text-stroke: 2px rgba(33, 150, 243, 0.6);
-  text-shadow: 0 0 40px rgba(33, 150, 243, 0.25);
+  -webkit-text-stroke: 2px rgba(58, 107, 40, 0.35);
+  text-shadow: 0 0 40px rgba(58, 107, 40, 0.15);
   pointer-events: none;
   z-index: 9998;
   user-select: none;
@@ -86,7 +86,7 @@ ul { list-style: none; }
 }
 
 .nav.scrolled {
-  background: rgba(10, 10, 10, 0.85);
+  background: rgba(242, 237, 226, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -110,7 +110,7 @@ ul { list-style: none; }
 .nav-logo-img {
   height: 132px;
   width: auto;
-  filter: brightness(0) invert(1);
+  filter: none;
   transition: var(--transition);
 }
 
@@ -123,7 +123,7 @@ ul { list-style: none; }
 .nav-link {
   font-size: 14px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(28, 24, 18, 0.7);
   letter-spacing: 0.02em;
   position: relative;
   transition: color 0.25s ease;
@@ -141,7 +141,7 @@ ul { list-style: none; }
 }
 
 .nav-link:hover {
-  color: var(--text-primary);
+  color: var(--accent);
 }
 
 .nav-link:hover::after {
@@ -183,6 +183,11 @@ ul { list-style: none; }
   transform-origin: center;
 }
 
+/* On hero (transparent nav) hamburger lines are white */
+body:not(.scrolled) .nav:not(.scrolled) .nav-hamburger span {
+  background: white;
+}
+
 .nav-hamburger.active span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -201,7 +206,7 @@ ul { list-style: none; }
   top: var(--nav-height);
   left: 0;
   right: 0;
-  background: rgba(10, 10, 10, 0.97);
+  background: rgba(242, 237, 226, 0.98);
   backdrop-filter: blur(20px);
   z-index: 999;
   transform: translateY(-110%);
@@ -224,7 +229,7 @@ ul { list-style: none; }
   display: block;
   font-size: 18px;
   font-weight: 500;
-  color: rgba(255,255,255,0.8);
+  color: rgba(28, 24, 18, 0.75);
   padding: 12px 0;
   border-bottom: 1px solid var(--border);
   transition: color 0.2s ease;
@@ -275,10 +280,10 @@ ul { list-style: none; }
   inset: 0;
   background: linear-gradient(
     160deg,
-    rgba(10, 10, 10, 0.55) 0%,
-    rgba(10, 10, 10, 0.5) 40%,
-    rgba(10, 10, 10, 0.75) 75%,
-    rgba(10, 10, 10, 0.92) 100%
+    rgba(28, 20, 10, 0.5) 0%,
+    rgba(28, 20, 10, 0.45) 40%,
+    rgba(28, 20, 10, 0.72) 75%,
+    rgba(28, 20, 10, 0.88) 100%
   );
 }
 
@@ -342,7 +347,7 @@ ul { list-style: none; }
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.5);
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -382,7 +387,7 @@ ul { list-style: none; }
   background: var(--accent-hover);
   border-color: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(33, 150, 243, 0.4);
+  box-shadow: 0 8px 30px rgba(58, 107, 40, 0.35);
 }
 
 .btn-outline {
@@ -390,19 +395,19 @@ ul { list-style: none; }
   align-items: center;
   gap: 8px;
   background: transparent;
-  color: var(--text-primary);
+  color: white;
   font-size: 15px;
   font-weight: 600;
   padding: 15px 36px;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   letter-spacing: 0.02em;
   transition: var(--transition);
 }
 
 .btn-outline:hover {
-  border-color: rgba(255,255,255,0.7);
-  background: rgba(255,255,255,0.05);
+  border-color: white;
+  background: rgba(255,255,255,0.12);
   transform: translateY(-2px);
 }
 
@@ -473,7 +478,7 @@ ul { list-style: none; }
 .service-card:hover {
   transform: translateY(-8px);
   border-color: var(--border-hover);
-  box-shadow: 0 20px 60px rgba(33, 150, 243, 0.1);
+  box-shadow: 0 20px 60px rgba(58, 107, 40, 0.12);
 }
 
 .service-icon {
@@ -732,7 +737,7 @@ ul { list-style: none; }
 .why-number {
   font-size: 56px;
   font-weight: 900;
-  color: rgba(33, 150, 243, 0.15);
+  color: rgba(58, 107, 40, 0.18);
   letter-spacing: -0.03em;
   line-height: 1;
   margin-bottom: 24px;
@@ -740,7 +745,7 @@ ul { list-style: none; }
 }
 
 .why-item:hover .why-number {
-  color: rgba(33, 150, 243, 0.35);
+  color: rgba(58, 107, 40, 0.4);
 }
 
 .why-item h3 {
@@ -783,9 +788,9 @@ ul { list-style: none; }
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(10, 10, 10, 0.92) 0%,
-    rgba(10, 10, 10, 0.75) 50%,
-    rgba(10, 10, 10, 0.92) 100%
+    rgba(28, 20, 10, 0.92) 0%,
+    rgba(28, 20, 10, 0.75) 50%,
+    rgba(28, 20, 10, 0.92) 100%
   );
 }
 
@@ -900,17 +905,17 @@ a.contact-value:hover {
 }
 
 .map-wrapper iframe {
-  filter: grayscale(100%) invert(92%) hue-rotate(180deg);
+  filter: grayscale(100%) sepia(20%);
   transition: filter 0.3s ease;
 }
 
 .map-wrapper:hover iframe {
-  filter: grayscale(30%) invert(0%);
+  filter: grayscale(0%) sepia(0%);
 }
 
 /* ===== FOOTER ===== */
 .footer {
-  background: #111111;
+  background: #1C1812;
   padding: 80px 0 0;
   border-top: 1px solid var(--border);
 }
@@ -927,7 +932,7 @@ a.contact-value:hover {
   width: auto;
   margin-bottom: 20px;
   filter: brightness(0) invert(1);
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 .footer-brand p {
@@ -1010,7 +1015,7 @@ a.contact-value:hover {
   transform: translateY(20px);
   pointer-events: none;
   transition: var(--transition);
-  box-shadow: 0 4px 20px rgba(33, 150, 243, 0.4);
+  box-shadow: 0 4px 20px rgba(58, 107, 40, 0.35);
 }
 
 .back-to-top.visible {
@@ -1022,7 +1027,7 @@ a.contact-value:hover {
 .back-to-top:hover {
   background: var(--accent-hover);
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(33, 150, 243, 0.5);
+  box-shadow: 0 8px 30px rgba(58, 107, 40, 0.45);
 }
 
 .back-to-top svg {
