@@ -800,12 +800,7 @@ body:not(.scrolled) .nav:not(.scrolled) .nav-hamburger span {
 .cta-band-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(28, 20, 10, 0.92) 0%,
-    rgba(28, 20, 10, 0.75) 50%,
-    rgba(28, 20, 10, 0.92) 100%
-  );
+  background: rgba(15, 10, 4, 0.78);
 }
 
 .cta-band-content {
@@ -821,13 +816,14 @@ body:not(.scrolled) .nav:not(.scrolled) .nav-hamburger span {
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.1;
-  color: var(--text-primary);
+  color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
   margin-bottom: 16px;
 }
 
 .cta-band-content p {
   font-size: 18px;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255, 255, 255, 0.75);
   margin-bottom: 40px;
 }
 
