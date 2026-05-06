@@ -279,11 +279,10 @@ body:not(.scrolled) .nav:not(.scrolled) .nav-hamburger span {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    160deg,
-    rgba(28, 20, 10, 0.5) 0%,
-    rgba(28, 20, 10, 0.45) 40%,
-    rgba(28, 20, 10, 0.72) 75%,
-    rgba(28, 20, 10, 0.88) 100%
+    to bottom,
+    rgba(15, 12, 6, 0.45) 0%,
+    rgba(15, 12, 6, 0.55) 45%,
+    rgba(15, 12, 6, 0.82) 100%
   );
 }
 
@@ -301,9 +300,9 @@ body:not(.scrolled) .nav:not(.scrolled) .nav-hamburger span {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 24px;
-  border: 1px solid rgba(33, 150, 243, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   padding: 6px 18px;
   border-radius: 100px;
 }
@@ -311,14 +310,16 @@ body:not(.scrolled) .nav:not(.scrolled) .nav-hamburger span {
 .hero-title {
   font-size: clamp(52px, 8vw, 96px);
   font-weight: 900;
-  line-height: 1.0;
+  line-height: 1.05;
   letter-spacing: -0.03em;
   margin-bottom: 28px;
-  color: var(--text-primary);
+  color: #ffffff;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
 }
 
 .hero-title .accent {
-  color: var(--accent);
+  color: #7BC859;
+  text-shadow: 0 2px 32px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
